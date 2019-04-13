@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpringRunnerTestSuite {
-    @Test
+  /*  @Test
     public void testCircleLoadedIntoContainer() {
         //Given
         ApplicationContext context =
@@ -25,7 +25,7 @@ public class SpringRunnerTestSuite {
         String name = shape.getShapeName();
         //Then
         Assert.assertEquals("This is a circle.", name);
-    }
+    }*/
 
     @Test
     public void testTriangleLoadedIntoContainer() {
@@ -38,7 +38,7 @@ public class SpringRunnerTestSuite {
         //Then
         Assert.assertEquals("This is a triangle.", name);
     }
-    @Test
+   /* @Test
     public void testSquareLoadedIntoContainer() {
         //Given
         ApplicationContext context =
@@ -48,7 +48,7 @@ public class SpringRunnerTestSuite {
         String name = shape.getShapeName();
         //Then
         Assert.assertEquals("This is a square.", name);
-    }
+    }*/
     @Test
     public void testShapeLoadedIntoContainer() {
         //Given
