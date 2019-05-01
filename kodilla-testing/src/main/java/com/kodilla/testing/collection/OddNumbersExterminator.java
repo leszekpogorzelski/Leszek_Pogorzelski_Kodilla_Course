@@ -3,18 +3,13 @@ package com.kodilla.testing.collection;
 import java.util.*;
 
 public class OddNumbersExterminator {
-
-
-
-    private ArrayList<Integer> oddNumbers = new ArrayList<Integer>();
-    private ArrayList<Integer> numbers;
-
-
-
+   private ArrayList<Integer> oddNumbers = new ArrayList<Integer>();
    public OddNumbersExterminator(){
 
         }
+
     public ArrayList<Integer> exterminate(ArrayList<Integer> numbers){
+
 
         if (numbers.size() == 0){
             System.out.println("Tablica jest pusta!");

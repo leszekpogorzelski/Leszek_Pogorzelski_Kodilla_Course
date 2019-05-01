@@ -5,10 +5,10 @@ import java.util.Map;
 
 public class ProductsOrdered {
 
-    private Map<Integer, String> productOrder = new HashMap<>();
+    private final Map<Integer, String> productOrder;
 
 
-    public ProductsOrdered(Map<Integer, String> map){
+    public ProductsOrdered(final Map<Integer, String> map){
         this.productOrder = map;
     }
 

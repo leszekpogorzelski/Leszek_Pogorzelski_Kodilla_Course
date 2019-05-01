@@ -6,14 +6,10 @@ public class ShapeCollector {
     private ArrayList<Shape> shapes = new ArrayList<Shape>();
     Shape shape;
 
-
-
-
         public ShapeCollector(Shape shape){
             this.shape = shape;
         }
-    public void addFigure(Shape shape){
-
+    public void addFigure(){
             shapes.add(shape);
     }
     public boolean removeFigure(Shape shape) {
@@ -22,7 +18,6 @@ public class ShapeCollector {
             shapes.remove(shape);
             result = true;
         }
-            shapes.remove(shape);
         return result;
     }
 
@@ -39,8 +34,6 @@ public class ShapeCollector {
             return shapes.size();
     }
 
-    //public ArrayList<Shape> getShapes() {
-        //return shapes;
-    //}
+
 
    }

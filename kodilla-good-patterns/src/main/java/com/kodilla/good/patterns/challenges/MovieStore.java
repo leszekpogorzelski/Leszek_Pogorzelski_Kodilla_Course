@@ -34,10 +34,10 @@ public final class MovieStore {
 
     public void printList(){
 
-       MovieStore.getMovies().entrySet().stream()
+        System.out.println(MovieStore.getMovies().entrySet().stream()
                 .map(m -> m.getValue())
                 .flatMap(List::stream)
-                .map(s -> s + " ! ")
-                .forEach(System.out::print);
+                .collect(Collectors.joining(" ! ")));
+
     }
 }

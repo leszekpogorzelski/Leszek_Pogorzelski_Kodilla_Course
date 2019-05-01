@@ -4,12 +4,12 @@ public class User {
     protected SocialPublisher socialPublisher;
     final private String name;
 
-    public String getName() {
-        return name;
-    }
-
     public User(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String sharePost(){
