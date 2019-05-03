@@ -16,13 +16,13 @@ import java.util.Optional;
 public class TaskListDaoTestSuite {
     @Autowired
    private TaskListDao taskListDao;
-    private static final String LISTNAME = "FIRST LIST";
+    private static final String LIST_NAME = "FIRST LIST";
     private static final String DESCRIPTION = "NEW LIST LIST";
 
     @Test
     public void testFindByListName() {
         //Given
-        TaskList taskList = new TaskList(LISTNAME, DESCRIPTION);
+        TaskList taskList = new TaskList(LIST_NAME, DESCRIPTION);
 
         //When
         taskListDao.save(taskList);
@@ -30,7 +30,7 @@ public class TaskListDaoTestSuite {
         //Then
         String name = taskList.getListName();
         List<TaskList> readTask = taskListDao.findByListName(name);
-        Assert.assertEquals(name, LISTNAME);
+        Assert.assertEquals(1, readTask.size());
 
 
         //CleanUp
