@@ -1,3 +1,4 @@
+/*
 package com.kodilla.hibernate.manytomany.dao;
 
 import com.kodilla.hibernate.manytomany.Company;
@@ -52,12 +53,13 @@ public class CompanyDaoTestSuite {
         Assert.assertNotEquals(0, greyMatterId);
 
         //CleanUp
-        //try {
-        //    companyDao.deleteById(softwareMachineId);
-        //    companyDao.deleteById(dataMaestersId);
-        //    companyDao.deleteById(greyMatterId);
-        //} catch (Exception e) {
-        //    //do nothing
-        //}
+        try {
+           companyDao.deleteById(softwareMachineId);
+            companyDao.deleteById(dataMaestersId);
+           companyDao.deleteById(greyMatterId);
+        } catch (Exception e) {
+           //do nothing
+        }
     }
 }
+*/
