@@ -1,13 +1,17 @@
 package com.kodilla.hibernate.manytomany;
 
+import org.hibernate.mapping.Set;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 @NamedNativeQuery(
         name = "Company.findByFirstLetters",
-        query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE 'Gre%'",
+        query = "SELECT * FROM COMPANIES WHERE substring(COMPANY_NAME, 1, 3)= :COMPANY_NAME",
         resultClass = Company.class
 )
 

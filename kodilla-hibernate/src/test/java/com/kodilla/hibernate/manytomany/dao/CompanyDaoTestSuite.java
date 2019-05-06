@@ -51,7 +51,7 @@ public class CompanyDaoTestSuite {
         int dataMaestersId = dataMaesters.getId();
         companyDao.save(greyMatter);
         int greyMatterId = greyMatter.getId();
-        List<Company> byFirstLetters = companyDao.findByFirstLetters();
+        List<Company> byFirstLetters = companyDao.findByFirstLetters("Gre");
         List<Employee> byLastName = employeeDao.findByLastName("Kovalsky");
 
         //Then
@@ -61,6 +61,7 @@ public class CompanyDaoTestSuite {
         Assert.assertEquals(1, byFirstLetters.size());
         Assert.assertEquals(1, byLastName.size());
 
+
         //CleanUp
         try {
            companyDao.deleteById(softwareMachineId);
@@ -69,5 +70,6 @@ public class CompanyDaoTestSuite {
         } catch (Exception e) {
            //do nothing
         }
+
     }
 }
