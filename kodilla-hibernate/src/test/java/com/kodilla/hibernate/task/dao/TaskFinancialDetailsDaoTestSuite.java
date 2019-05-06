@@ -1,3 +1,4 @@
+/*
 package com.kodilla.hibernate.task.dao;
 
 
@@ -36,3 +37,4 @@ private TaskFinancialDetailsDao taskFinancialDetailsDao;
 
 
 }
+*/

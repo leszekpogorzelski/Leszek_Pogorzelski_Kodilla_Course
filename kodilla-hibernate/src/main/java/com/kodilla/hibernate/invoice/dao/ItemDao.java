@@ -1,3 +1,4 @@
+/*
 package com.kodilla.hibernate.invoice.dao;
 
 import com.kodilla.hibernate.invoice.Item;
@@ -10,3 +11,4 @@ import javax.transaction.Transactional;
 @Repository
 public interface ItemDao extends CrudRepository<Item, Integer> {
 }
+*/

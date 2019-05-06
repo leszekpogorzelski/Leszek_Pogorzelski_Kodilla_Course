@@ -1,3 +1,4 @@
+/*
 package com.kodilla.hibernate.invoice;
 
 import javax.persistence.*;
@@ -68,3 +69,4 @@ public class Item {
         this.product = product;
     }
 }
+*/
