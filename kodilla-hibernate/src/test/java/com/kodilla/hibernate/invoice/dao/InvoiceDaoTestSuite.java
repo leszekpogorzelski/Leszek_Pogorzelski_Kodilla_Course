@@ -1,4 +1,3 @@
-/*
 package com.kodilla.hibernate.invoice.dao;
 
 import com.kodilla.hibernate.invoice.Invoice;
@@ -84,4 +83,3 @@ public class InvoiceDaoTestSuite {
         }
     }
 }
-*/

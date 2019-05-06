@@ -1,4 +1,3 @@
-/*
 package com.kodilla.hibernate.invoice;
 
 import javax.persistence.*;
@@ -52,4 +51,3 @@ fetch = FetchType.LAZY
         Name = name;
     }
 }
-*/

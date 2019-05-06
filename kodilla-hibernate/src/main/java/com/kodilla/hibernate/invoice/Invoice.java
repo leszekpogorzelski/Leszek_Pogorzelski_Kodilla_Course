@@ -1,4 +1,3 @@
-/*
 package com.kodilla.hibernate.invoice;
 
 import javax.persistence.*;
@@ -53,4 +52,3 @@ fetch = FetchType.LAZY
         this.items = items;
     }
 }
-*/

@@ -1,4 +1,3 @@
-/*
 package com.kodilla.hibernate.task;
 
 
@@ -49,4 +48,3 @@ public class TaskFinancialDetails {
         this.paid = paid;
     }
 }
-*/

@@ -1,4 +1,3 @@
-/*
 package com.kodilla.hibernate.task.dao;
 
 import com.kodilla.hibernate.task.TaskFinancialDetails;
@@ -14,4 +13,3 @@ public interface TaskFinancialDetailsDao extends CrudRepository<TaskFinancialDet
     List<TaskFinancialDetails> findByPaid(boolean paid);
 
 }
-*/

@@ -1,4 +1,3 @@
-/*
 package com.kodilla.hibernate.task;
 
 import com.kodilla.hibernate.tasklist.TaskList;
@@ -104,4 +103,3 @@ public class Task {
         this.duration = duration;
     }
 }
-*/
