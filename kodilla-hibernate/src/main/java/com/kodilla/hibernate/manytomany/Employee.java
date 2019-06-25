@@ -6,10 +6,15 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedQueries({
 @NamedQuery(
         name = "Employee.findByLastName",
-        query = "FROM Employee WHERE lastName= :LAST_NAME"
-)
+        query = "FROM Employee WHERE lastName = :LAST_NAME"),
+@NamedQuery(
+        name = "Employee.findByPartName",
+        //query = "FROM Employee WHERE lastName LIKE CONCAT('%', LAST_NAME, '%')"
+        query = "FROM Employee WHERE lastName LIKE CONCAT('FIRST_NAME' + 'LAST_NAME'")
+})
 
 @Entity
 @Table(name = "EMPLOYEES")

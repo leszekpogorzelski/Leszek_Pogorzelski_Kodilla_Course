@@ -53,6 +53,8 @@ public class CompanyDaoTestSuite {
         int greyMatterId = greyMatter.getId();
         List<Company> byFirstLetters = companyDao.findByFirstLetters("Gre");
         List<Employee> byLastName = employeeDao.findByLastName("Kovalsky");
+        List<Company> byPart = companyDao.findByPartCompanyName("war");
+        //List<Employee> byPart = employeeDao.findByPartName("cks");
 
         //Then
         Assert.assertNotEquals(0, softwareMachineId);
@@ -60,6 +62,7 @@ public class CompanyDaoTestSuite {
         Assert.assertNotEquals(0, greyMatterId);
         Assert.assertEquals(1, byFirstLetters.size());
         Assert.assertEquals(1, byLastName.size());
+        Assert.assertEquals(1, byPart.size());
 
 
         //CleanUp
