@@ -9,15 +9,17 @@ import java.util.List;
 
 
 @NamedNativeQueries({
-            @NamedNativeQuery(
+        @NamedNativeQuery(
                 name = "Company.findByFirstLetters",
                 query = "SELECT * FROM COMPANIES WHERE substring(COMPANY_NAME, 1, 3)= :COMPANY_NAME",
-                resultClass = Company.class),
-            @NamedNativeQuery(
-                name = "Company.findByPartCompanyName",
-                query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE '%+COMPANY_NAME+%'",
                 resultClass = Company.class)
-        })
+})
+        @NamedQuery(
+                name = "Company.findByPartCompanyName",
+                query = "FROM Company WHERE COMPANY_NAME LIKE CONCAT('%', :NAME, '%')")
+
+
+
 
 @Entity
 @Table(name = "COMPANIES")

@@ -2,6 +2,7 @@ package com.kodilla.hibernate.manytomany.dao;
 
 import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
+import com.kodilla.hibernate.manytomany.facade.EmployeeAndCompanySearchFacade;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,6 +21,8 @@ public class CompanyDaoTestSuite {
     @Autowired
     EmployeeDao employeeDao;
 
+    @Autowired
+    private EmployeeAndCompanySearchFacade searchFacade;
 
     @Test
     public void testSaveManyToMany(){
@@ -53,8 +56,9 @@ public class CompanyDaoTestSuite {
         int greyMatterId = greyMatter.getId();
         List<Company> byFirstLetters = companyDao.findByFirstLetters("Gre");
         List<Employee> byLastName = employeeDao.findByLastName("Kovalsky");
-        List<Company> byPart = companyDao.findByPartCompanyName("war");
-        //List<Employee> byPart = employeeDao.findByPartName("cks");
+
+        List<Company> byPart = searchFacade.findCompany("war");
+        List<Employee> byPartEmployee = searchFacade.findEmployee("cks");
 
         //Then
         Assert.assertNotEquals(0, softwareMachineId);
@@ -63,6 +67,7 @@ public class CompanyDaoTestSuite {
         Assert.assertEquals(1, byFirstLetters.size());
         Assert.assertEquals(1, byLastName.size());
         Assert.assertEquals(1, byPart.size());
+        Assert.assertEquals(1, byPartEmployee.size());
 
 
         //CleanUp
