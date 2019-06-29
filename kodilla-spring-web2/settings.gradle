@@ -3,4 +3,4 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = 'kodilla-spring-web1'
+rootProject.name = 'kodilla-spring-web2'

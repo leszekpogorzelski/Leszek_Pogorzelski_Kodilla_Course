@@ -16,9 +16,9 @@ public class FacadeWatcher {
     private static final Logger LOGGER = LoggerFactory.getLogger(FacadeWatcher.class);
 
 
-    @Before("execution(* com.kodilla.patterns2.facade.api.OrderFacade.processOrder(..)) && args(order) && args(user) && target(object)")
+    @Before("execution(* com.kodilla.patterns2.facade.api.OrderFacade.processOrder(..)) && args(order, user) && target(object)")
     public void logEvent(OrderDto order, Long user, Object object) {
-        LOGGER.info(order.getItems().get(0) + " UserId: " + user + object.getClass().getName() );
+        LOGGER.info("Order size: " + order.getItems().size() + " UserId: " + user + " " + object.getClass().getName() );
     }
     @Around("execution(* com.kodilla.patterns2.facade.api.OrderFacade.processOrder(..))")
     public Object measureTime(final ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
